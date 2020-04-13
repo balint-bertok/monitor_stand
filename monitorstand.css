@@ -1,0 +1,299 @@
+@import url(https://fonts.googleapis.com/css?family=Asap);
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.oops {
+  display: none;
+}
+
+span {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: 27px;
+  font-family: 'Asap', sans-serif;
+  padding: 10px;
+}
+
+
+/* Transition definition */
+.containerframe {
+  -webkit-transition: width 0.4s ease, height 0.4s ease;
+  -moz-transition: width 0.4s ease, height 0.4s ease;
+  -o-transition: width 0.4s ease, height 0.4s ease;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+/* The containerframe that defines the dimenions of the monitor - used in media queries */
+.containerframe {
+  width: 900px;
+  height: 525px;
+  margin: 0 auto;
+}
+
+/* Black monitor outline */
+.monitor {
+  padding: 4%;
+  position:relative;
+  background: #333;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/* Camera on top of the monitor */
+.monitor:before {
+  content: "";
+  display: block;
+  background: #E6E9ED;
+  position: absolute;
+  padding: 0.8%;
+  margin-right: -0.4%;
+  border-radius: 50%;
+  right: 50%;
+  top: 1.8%;
+}
+
+/* Power button on the bottom of monitor */
+.monitor:after {
+  content: "";
+  display: block;
+  background: #AAB2BD;
+  position: absolute;
+  padding: 1%;
+  border-radius: 10%;
+  right: 4%;
+  bottom: 1.5%;
+}
+
+/* The containerframe of the content */
+.screen {
+  height: 100%;
+  overflow: hidden; /* so that scroll bar is hidden */
+}
+
+/* Scrollable section inside the screen */
+.content {
+  height: 125%;
+  width: calc(125% + 17px); /* 17px for scroll bar */
+  overflow-y: scroll;
+  position: relative;
+}
+
+.screen:after {
+  content:'';
+  display: block;
+  height: 88%;
+  background: #333;
+  position: absolute;
+  right: 0;
+  top: 6%;
+  width: 4%;
+}
+
+/* Image on the screen */
+.content img {
+  display: block;
+  width: 100%;
+}
+
+/* Stand */
+.monitor-stand {
+  position: relative;
+  margin: 0 auto;
+  height: 18%;
+  width: 20%;
+  background: #F3F3F4;
+}
+
+/* Shadow on stand - have to set manually since border-top doesn't support % :( */
+.monitor-stand {
+  border-top: 24px solid #D1D3D6;
+}
+
+/* Bottom of stand */
+.monitor-stand:after {
+  content: '';
+  position: absolute;
+  background: #E7E8E9;
+  height: 30%;
+  width: 200%;
+  margin-left: -50%;
+  margin-top: 29%;
+  border-radius: 5px;
+}
+
+
+/* 1800px and less ------------------------------ */
+@media (max-width: 1800px) {
+
+  .containerframe {
+    width: 870px;
+    height: 500px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1700px and less ------------------------------ */
+@media (max-width: 1700px) {
+
+  .containerframe {
+    width: 820px;
+    height: 500px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1600px and less ------------------------------ */
+@media (max-width: 1600px) {
+
+  .containerframe {
+    width: 770px;
+    height: 500px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1500px and less ------------------------------ */
+@media (max-width: 1500px) {
+
+  .containerframe {
+    width: 720px;
+    height: 450px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1400px and less ------------------------------ */
+@media (max-width: 1400px) {
+
+  .containerframe {
+    width: 665px;
+    height: 420px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1300px and less ------------------------------ */
+@media (max-width: 1300px) {
+
+  .containerframe {
+    width: 610px;
+    height: 350px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 1200px and less ------------------------------ */
+@media (max-width: 1200px) {
+
+  .containerframe {
+    width: 500px;
+    height: 330px;
+  }
+
+  .monitor-stand {
+    border-top: 20px solid #D1D3D6;
+  }
+}
+
+/* 992px and less ------------------------------ */
+@media (max-width: 992px) {
+
+  .containerframe {
+    width: 380px;
+    height: 250px;
+  }
+
+  .monitor-stand {
+    border-top: 15px solid #D1D3D6;
+  }
+}
+
+/* 768px and less ------------------------------ */
+@media (max-width: 768px) {
+
+  .containerframe,
+  .containerframe:hover {
+    width: 610px;
+    height: 350px;
+  }
+
+  .monitor-stand {
+    border-top: 12px solid #D1D3D6;
+  }
+}
+
+/* 660px and less ------------------------------ */
+@media (max-width: 660px) {
+
+  .containerframe,
+  .containerframe:hover {
+    width: 500px;
+    height: 330px;
+  }
+
+  .monitor-stand {
+    border-top: 12px solid #D1D3D6;
+  }
+}
+
+/* 545px and less ------------------------------ */
+@media (max-width: 545px) {
+
+  .containerframe,
+  .containerframe:hover {
+    width: 400px;
+    height: 260px;
+  }
+
+  .monitor-stand {
+    border-top: 12px solid #D1D3D6;
+  }
+}
+
+/* 480px and less ------------------------------ */
+@media (max-width: 480px) {
+
+  .containerframe,
+  .containerframe:hover {
+    width: 300px;
+    height: 175px;
+  }
+
+  .monitor-stand {
+    border-top: 8px solid #D1D3D6;
+  }
+}
+
+/* 320px and less ------------------------------ */
+@media (max-width: 320px) {
+
+  span {
+    display: none;
+  }
+
+  .oops {
+    display: block;
+  }
+}
